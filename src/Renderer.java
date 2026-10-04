@@ -1,4 +1,4 @@
 public interface Renderer {
-    String getType();
-    String render(String shapeName, double dimension);
+    String renderCircle(int radius);
+    String renderSquare(int side);
 }

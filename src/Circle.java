@@ -1,5 +1,5 @@
 public class Circle extends Shape {
-    public static final double RADIUS = 2;
+    public static final int RADIUS = 2;
 
     public Circle(String id, Renderer renderer) {
         super(id, RADIUS, renderer);
@@ -7,6 +7,6 @@ public class Circle extends Shape {
 
     @Override
     public String execute() {
-        return renderer.render("circle", dimension);
+        return getRenderer().renderCircle(getDimension());
     }
 }

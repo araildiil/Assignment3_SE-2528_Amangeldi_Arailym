@@ -1,11 +1,11 @@
 public class RasterRenderer implements Renderer {
     @Override
-    public String getType() {
-        return "RASTER";
+    public String renderCircle(int radius) {
+        return "RASTER circle radius=" + radius + "px";
     }
 
     @Override
-    public String render(String shapeName, double dimension) {
-        return "RASTER " + shapeName + " side=" + dimension + "px";
+    public String renderSquare(int side) {
+        return "RASTER square side=" + side + "px";
     }
 }

@@ -1,24 +1,30 @@
-public abstract class Shape {
-    protected final String id;
-    protected double dimension;
-    protected Renderer renderer;
+import java.util.Objects;
 
-    protected Shape(String id, double dimension, Renderer renderer) {
-        this.id = id;
+public abstract class Shape {
+    private final String id;
+    private final int dimension;
+    private Renderer renderer;
+
+    protected Shape(String id, int dimension, Renderer renderer) {
+        this.id = Objects.requireNonNull(id);
         this.dimension = dimension;
-        this.renderer = renderer;
+        this.renderer = Objects.requireNonNull(renderer);
     }
 
     public String getId() {
         return id;
     }
 
-    public double getDimension() {
+    public int getDimension() {
         return dimension;
     }
 
+    protected Renderer getRenderer() {
+        return renderer;
+    }
+
     public void setImplementation(Renderer renderer) {
-        this.renderer = renderer;
+        this.renderer = Objects.requireNonNull(renderer);
     }
 
     public abstract String execute();

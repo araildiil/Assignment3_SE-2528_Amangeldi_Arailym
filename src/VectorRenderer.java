@@ -1,11 +1,11 @@
 public class VectorRenderer implements Renderer {
     @Override
-    public String getType() {
-        return "VECTOR";
+    public String renderCircle(int radius) {
+        return "VECTOR circle radius=" + radius;
     }
 
     @Override
-    public String render(String shapeName, double dimension) {
-        return "VECTOR " + shapeName + " radius=" + dimension;
+    public String renderSquare(int side) {
+        return "VECTOR square side=" + side;
     }
 }

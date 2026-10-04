@@ -1,5 +1,5 @@
 public class Square extends Shape {
-    public static final double SIDE = 3;
+    public static final int SIDE = 3;
 
     public Square(String id, Renderer renderer) {
         super(id, SIDE, renderer);
@@ -7,6 +7,6 @@ public class Square extends Shape {
 
     @Override
     public String execute() {
-        return renderer.render("square", dimension);
+        return getRenderer().renderSquare(getDimension());
     }
 }
