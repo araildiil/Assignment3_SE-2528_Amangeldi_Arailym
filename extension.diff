@@ -1,0 +1,52 @@
+diff --git a/src/AsciiRenderer.java b/src/AsciiRenderer.java
+new file mode 100644
+index 0000000..67316cc
+--- /dev/null
++++ b/src/AsciiRenderer.java
+@@ -0,0 +1,11 @@
++public class AsciiRenderer implements Renderer {
++    @Override
++    public String renderCircle(int radius) {
++        return "ASCII (circle r=" + radius + ")";
++    }
++
++    @Override
++    public String renderSquare(int side) {
++        return "ASCII [square s=" + side + "]";
++    }
++}
+diff --git a/src/Main.java b/src/Main.java
+index 5b4eee7..573778b 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -51,6 +51,22 @@ public class Main {
+         String idBefore = sw.getId();
+         int dimBefore = sw.getDimension();
+ 
++
++        total++;
++        Shape a1i3 = new Circle("C6", new AsciiRenderer());
++        String t6 = a1i3.execute();
++        String exp6 = "ASCII (circle r=2)";
++        passed += check("T6", exp6.equals(t6),
++                a1i3.getClass().getSimpleName() + " + AsciiRenderer", t6, exp6);
++
++
++        total++;
++        Shape a2i3 = new Square("S3", new AsciiRenderer());
++        String t7 = a2i3.execute();
++        String exp7 = "ASCII [square s=3]";
++        passed += check("T7", exp7.equals(t7),
++                a2i3.getClass().getSimpleName() + " + AsciiRenderer", t7, exp7);
++
+         sw.setImplementation(new RasterRenderer());
+ 
+         Shape refAfter = sw;
+@@ -82,5 +98,6 @@ public class Main {
+                     + " | expected=" + expected);
+             return 0;
+         }
++
+     }
+ }
+\ No newline at end of file

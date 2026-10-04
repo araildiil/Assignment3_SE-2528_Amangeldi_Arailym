@@ -70,6 +70,22 @@ public class Main {
                 + ", after=" + after;
         passed += check("T5", ok, "Circle switch Vector->Raster", actual, null);
 
+
+        total++;
+        Shape a1i3 = new Circle("C6", new AsciiRenderer());
+        String t6 = a1i3.execute();
+        String exp6 = "ASCII (circle r=2)";
+        passed += check("T6", exp6.equals(t6),
+                a1i3.getClass().getSimpleName() + " + AsciiRenderer", t6, exp6);
+
+
+        total++;
+        Shape a2i3 = new Square("S3", new AsciiRenderer());
+        String t7 = a2i3.execute();
+        String exp7 = "ASCII [square s=3]";
+        passed += check("T7", exp7.equals(t7),
+                a2i3.getClass().getSimpleName() + " + AsciiRenderer", t7, exp7);
+
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
     }
 
