@@ -1,7 +1,7 @@
-public class SquareRenderer extends Shape {
+public class Square extends Shape {
     public static final double SIDE = 3;
 
-    public SquareRenderer(String id, Renderer renderer) {
+    public Square(String id, Renderer renderer) {
         super(id, SIDE, renderer);
     }
 
