@@ -5,7 +5,6 @@
 - Topic: A (Drawing)
 - Repository: https://github.com/araildiil/Assignment3_SE-2528_Amangeldi_Arailym.git
 - Base commit: b870a537efe8b3846b39f9adc0fe34954ca7e369
-- Submitted commit: 74a64f94565ce9f173fae3d96103ec3d08fd37af
 
 ## Role map
 
@@ -28,10 +27,11 @@
 - T5 check: `Main.demo()` — reference equality via `==`, unchanged `id`/`dimension`
 
 ## Build and run
-javac --release 17 -encoding UTF-8 -d out @sources.txt
-java -cp out Main --demo
 
-text
+```bash
+javac --release 17 -encoding UTF-8 -d out "@sources.txt"
+java -cp out Main --demo
+```
 
 ## Expected results
 

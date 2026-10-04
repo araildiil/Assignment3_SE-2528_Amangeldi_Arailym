@@ -16,12 +16,12 @@ index 0000000..67316cc
 +    }
 +}
 diff --git a/src/Main.java b/src/Main.java
-index 5b4eee7..573778b 100644
+index 5b4eee7..d408135 100644
 --- a/src/Main.java
 +++ b/src/Main.java
-@@ -51,6 +51,22 @@ public class Main {
-         String idBefore = sw.getId();
-         int dimBefore = sw.getDimension();
+@@ -70,6 +70,22 @@ public class Main {
+                 + ", after=" + after;
+         passed += check("T5", ok, "Circle switch Vector->Raster", actual, null);
  
 +
 +        total++;
@@ -39,14 +39,6 @@ index 5b4eee7..573778b 100644
 +        passed += check("T7", exp7.equals(t7),
 +                a2i3.getClass().getSimpleName() + " + AsciiRenderer", t7, exp7);
 +
-         sw.setImplementation(new RasterRenderer());
- 
-         Shape refAfter = sw;
-@@ -82,5 +98,6 @@ public class Main {
-                     + " | expected=" + expected);
-             return 0;
-         }
-+
+         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
      }
- }
-\ No newline at end of file
+ 
